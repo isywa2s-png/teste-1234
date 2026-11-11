@@ -1,0 +1,1195 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#AA151B">
+    <meta name="description" content="Site oficial da Espanha. Acompanhe os jogadores, convocações, estatísticas, temporadas e títulos conquistados.">
+
+    <title>ESPANHA | Site Oficial</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="Assents/Favicon.png">
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ÍCONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsivo.css">
+    <link rel="stylesheet" href="CSS/animacoes.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         TELA DE CARREGAMENTO
+    ====================================== -->
+
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <img src="Assents/Espanha.png" alt="Espanha" class="loading-logo">
+
+            <div class="loading-spinner"></div>
+
+            <h2>ESPANHA</h2>
+            <p>Preparando o ambiente...</p>
+        </div>
+    </div>
+
+    <!-- =====================================
+         ESTRUTURA PRINCIPAL
+    ====================================== -->
+
+    <div id="app" class="app-container">
+
+        <!-- =====================================
+             MENU LATERAL
+        ====================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+                    <img src="Assents/Espanha.png" alt="Escudo da Espanha">
+                </div>
+
+                <div class="sidebar-brand">
+                    <h2>ESPANHA</h2>
+                    <span>SITE OFICIAL</span>
+                </div>
+
+                <button class="sidebar-close" id="sidebar-close" aria-label="Fechar menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <!-- NAVEGAÇÃO -->
+
+            <nav class="sidebar-navigation">
+
+                <span class="navigation-label">MENU PRINCIPAL</span>
+
+                <button class="nav-item active" data-section="painel">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Painel Geral</span>
+                </button>
+
+                <button class="nav-item" data-section="jogadores">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Banco de Jogadores</span>
+                </button>
+
+                <button class="nav-item" data-section="estatisticas">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Estatísticas</span>
+                </button>
+
+                <span class="navigation-label">HISTÓRICO</span>
+
+                <button class="nav-item" data-section="temporadas">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Temporadas</span>
+                </button>
+
+                <button class="nav-item" data-section="trofeus">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Sala de Troféus</span>
+                </button>
+
+                <div class="sidebar-divider"></div>
+
+                <span class="navigation-label">SISTEMA</span>
+
+                <button class="nav-item admin-nav-item" data-section="admin" id="admin-nav">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Administração</span>
+                    <i class="fa-solid fa-lock admin-lock"></i>
+                </button>
+
+            </nav>
+
+            <!-- RODAPÉ DO MENU -->
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-status">
+                    <span class="status-indicator"></span>
+                    <span>Sistema online</span>
+                </div>
+
+                <div class="sidebar-footer-brand">
+                    <img src="Assents/Favicon.png" alt="Espanha">
+                    <div>
+                        <strong>ESPANHA</strong>
+                        <small>¡Vamos, España!</small>
+                    </div>
+                </div>
+
+                <span class="sidebar-copyright">
+                    © 2026 Espanha. Todos os direitos reservados.
+                </span>
+
+            </div>
+
+        </aside>
+
+        <!-- FUNDO DO MENU MOBILE -->
+
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <!-- =====================================
+             CONTEÚDO PRINCIPAL
+        ====================================== -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="breadcrumb">
+                        <span>ESPANHA</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <strong id="breadcrumb-current">Painel Geral</strong>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="online-indicator">
+                        <span class="status-indicator"></span>
+                        <span>Online</span>
+                    </div>
+
+                    <div class="topbar-divider"></div>
+
+                    <div class="topbar-club">
+                        <img src="Assents/Favicon.png" alt="Espanha">
+                        <div>
+                            <strong>Espanha</strong>
+                            <small>Seleção Oficial</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- =====================================
+                 SEÇÃO: PAINEL GERAL
+            ====================================== -->
+
+            <section class="page-section active" id="section-painel">
+
+                <div class="welcome-banner">
+
+                    <div class="welcome-content">
+
+                        <span class="welcome-tag">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            SITE OFICIAL
+                        </span>
+
+                        <h1>¡Vamos, España!</h1>
+
+                        <p>
+                            Tradição, união e paixão pelo futebol.
+                            Bem-vindo ao ambiente oficial da Espanha.
+                        </p>
+
+                        <div class="welcome-actions">
+
+                            <button class="btn-primary" data-go-section="jogadores">
+                                <i class="fa-solid fa-users"></i>
+                                Conhecer jogadores
+                            </button>
+
+                            <button class="btn-secondary" data-go-section="trofeus">
+                                <i class="fa-solid fa-trophy"></i>
+                                Ver conquistas
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="welcome-emblem">
+                        <img src="Assents/Espanha.png" alt="Escudo da Espanha">
+                    </div>
+
+                    <div class="banner-decoration banner-decoration-one"></div>
+                    <div class="banner-decoration banner-decoration-two"></div>
+
+                </div>
+
+                <!-- INFORMAÇÕES GERAIS -->
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">VISÃO GERAL</span>
+                        <h2>Painel principal</h2>
+                        <p>Confira as principais informações da seleção.</p>
+                    </div>
+
+                </div>
+
+                <!-- CARDS -->
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-icon red">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div class="dashboard-card-info">
+                            <span>Jogadores no elenco</span>
+                            <strong id="total-jogadores">0</strong>
+                            <small>Jogadores registrados</small>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-icon gold">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <div class="dashboard-card-info">
+                            <span>Títulos conquistados</span>
+                            <strong id="total-titulos">0</strong>
+                            <small>Conquistas registradas</small>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-icon dark">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+
+                        <div class="dashboard-card-info">
+                            <span>Temporadas</span>
+                            <strong id="total-temporadas">0</strong>
+                            <small>Temporadas registradas</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- PRESIDENTA -->
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">LIDERANÇA</span>
+                        <h2>Presidência</h2>
+                        <p>Conheça a responsável pela administração da Espanha.</p>
+                    </div>
+
+                </div>
+
+                <div class="president-card">
+
+                    <div class="president-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <div class="president-information">
+
+                        <span>PRESIDENTA OFICIAL</span>
+
+                        <h3 id="president-name">
+                            Aguardando cadastro
+                        </h3>
+
+                        <p>
+                            Responsável pela gestão e administração da seleção espanhola.
+                        </p>
+
+                    </div>
+
+                    <div class="president-badge">
+                        <i class="fa-solid fa-crown"></i>
+                        PRESIDENTA
+                    </div>
+
+                </div>
+
+                <!-- INFORMAÇÕES RECENTES -->
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">ACOMPANHAMENTO</span>
+                        <h2>Informações recentes</h2>
+                        <p>Últimas atualizações realizadas na seleção.</p>
+                    </div>
+
+                </div>
+
+                <div class="recent-activity-card" id="recent-activity">
+
+                    <div class="empty-state">
+                        <div class="empty-state-icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+
+                        <h3>Nenhuma atualização</h3>
+
+                        <p>
+                            As atualizações aparecerão aqui.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =====================================
+                 SEÇÃO: BANCO DE JOGADORES
+            ====================================== -->
+
+            <section class="page-section" id="section-jogadores">
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">CADASTRO DE ATLETAS</span>
+                        <h1>Banco de jogadores</h1>
+                        <p>Consulte os jogadores cadastrados e acompanhe as convocações da Espanha.</p>
+                    </div>
+
+                    <div class="page-header-actions admin-only">
+                        <button class="btn-primary" id="add-player-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Adicionar jogador
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- RESUMO DOS JOGADORES -->
+
+                <div class="roster-summary">
+
+                    <div class="roster-summary-item">
+                        <i class="fa-solid fa-users"></i>
+                        <div>
+                            <strong id="roster-total">0</strong>
+                            <span>Jogadores cadastrados</span>
+                        </div>
+                    </div>
+
+                    <div class="roster-summary-item">
+                        <i class="fa-solid fa-shield"></i>
+                        <div>
+                            <strong id="roster-active">0</strong>
+                            <span>Convocados para o elenco</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FILTROS -->
+
+                <div class="roster-toolbar">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="player-search"
+                            placeholder="Pesquisar jogador..."
+                        >
+                    </div>
+
+                    <div class="filter-box">
+
+                        <select id="player-position-filter" aria-label="Filtrar por posição">
+                            <option value="">Todas as posições</option>
+                            <option value="Goleiro">Goleiro</option>
+                            <option value="Defensor">Defensor</option>
+                            <option value="Meio-campista">Meio-campista</option>
+                            <option value="Atacante">Atacante</option>
+                        </select>
+
+                    </div>
+
+                    <div class="filter-box">
+
+                        <select id="player-callup-filter" aria-label="Filtrar por convocação">
+                            <option value="">Todos os jogadores</option>
+                            <option value="Convocado">Convocados</option>
+                            <option value="Não convocado">Não convocados</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- LISTA DE JOGADORES -->
+
+                <div class="players-grid" id="players-container">
+
+                    <div class="empty-state">
+
+                        <div class="empty-state-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <h3>Nenhum jogador cadastrado</h3>
+
+                        <p>
+                            Os jogadores registrados aparecerão aqui.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =====================================
+                 SEÇÃO: ESTATÍSTICAS
+            ====================================== -->
+
+            <section class="page-section" id="section-estatisticas">
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">DESEMPENHO</span>
+                        <h1>Estatísticas</h1>
+                        <p>Acompanhe os números e o desempenho da seleção.</p>
+                    </div>
+
+                </div>
+
+                <!-- RESUMO ESTATÍSTICO -->
+
+                <div class="statistics-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon red">
+                            <i class="fa-solid fa-futbol"></i>
+                        </div>
+                        <span>Partidas disputadas</span>
+                        <strong id="stat-partidas">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon gold">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <span>Gols marcados</span>
+                        <strong id="stat-gols">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon dark">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <span>Assistências</span>
+                        <strong id="stat-assistencias">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon green">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <span>Vitórias</span>
+                        <strong id="stat-vitorias">0</strong>
+                    </div>
+
+                </div>
+
+                <!-- TABELA DE ESTATÍSTICAS -->
+
+                <div class="content-card">
+
+                    <div class="content-card-header">
+
+                        <div>
+                            <h3>Estatísticas individuais</h3>
+                            <p>Desempenho dos jogadores cadastrados.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Jogador</th>
+                                    <th>Partidas</th>
+                                    <th>Gols</th>
+                                    <th>Assistências</th>
+                                    <th>Cartões</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="statistics-table-body">
+
+                                <tr>
+                                    <td colspan="5" class="table-empty">
+                                        Nenhuma estatística cadastrada.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =====================================
+                 SEÇÃO: TEMPORADAS
+            ====================================== -->
+
+            <section class="page-section" id="section-temporadas">
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">HISTÓRICO DA SELEÇÃO</span>
+                        <h1>Temporadas</h1>
+                        <p>Consulte os resultados, destaques individuais e títulos de cada temporada.</p>
+                    </div>
+
+                    <div class="page-header-actions admin-only">
+                        <button class="btn-primary" id="add-season-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Registrar temporada
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="season-information-card">
+                    <div class="season-information-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <div>
+                        <strong>Histórico permanente</strong>
+                        <p>As temporadas salvas ficam disponíveis para consulta, mesmo depois do início de uma nova temporada.</p>
+                    </div>
+                </div>
+
+                <div class="seasons-grid" id="seasons-container">
+
+                    <div class="empty-state">
+                        <div class="empty-state-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h3>Nenhuma temporada registrada</h3>
+                        <p>Quando uma temporada for salva, ela aparecerá aqui.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =====================================
+                 SEÇÃO: SALA DE TROFÉUS
+            ====================================== -->
+
+            <section class="page-section" id="section-trofeus">
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">GLÓRIAS E CONQUISTAS</span>
+                        <h1>Sala de Troféus</h1>
+                        <p>Todos os títulos conquistados pela Espanha, organizados por competição.</p>
+                    </div>
+
+                </div>
+
+                <!-- TOTAL DE TÍTULOS -->
+
+                <div class="trophy-highlight">
+
+                    <div class="trophy-highlight-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <div>
+                        <span>TOTAL DE TÍTULOS</span>
+                        <strong id="trophy-total">0</strong>
+                        <p>Conquistas registradas nas temporadas.</p>
+                    </div>
+
+                </div>
+
+                <div class="trophy-information">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Esta sala é atualizada automaticamente com os títulos informados no cadastro de cada temporada.</span>
+                </div>
+
+                <!-- TROFÉUS AGRUPADOS POR COMPETIÇÃO -->
+
+                <div class="trophies-grid" id="trophies-container">
+
+                    <div class="empty-state">
+
+                        <div class="empty-state-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <h3>Nenhum título conquistado</h3>
+
+                        <p>
+                            Os títulos aparecerão aqui assim que forem registrados em uma temporada.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =====================================
+                 SEÇÃO: ADMINISTRAÇÃO
+            ====================================== -->
+
+            <section class="page-section" id="section-admin">
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="section-eyebrow">CONTROLE DO SISTEMA</span>
+                        <h1>Administração</h1>
+                        <p>Gerencie as informações oficiais da Espanha.</p>
+                    </div>
+
+                    <div class="admin-access-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Acesso administrativo
+                    </div>
+
+                </div>
+
+                <!-- ACESSO ADMINISTRATIVO -->
+
+                <div id="admin-login-area" class="admin-login-card">
+
+                    <div class="admin-login-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <h2>Área restrita</h2>
+
+                    <p>
+                        Esta área é exclusiva para o administrador oficial da Espanha.
+                    </p>
+
+                    <form id="admin-login-form">
+
+                        <div class="form-group">
+
+                            <label for="admin-username">
+                                Identificação
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="admin-username"
+                                    placeholder="Digite sua identificação"
+                                    autocomplete="username"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="admin-password">
+                                Senha de acesso
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <i class="fa-solid fa-key"></i>
+
+                                <input
+                                    type="password"
+                                    id="admin-password"
+                                    placeholder="Digite sua senha"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-full">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                            Entrar na administração
+                        </button>
+
+                        <span id="admin-login-error" class="form-error"></span>
+
+                    </form>
+
+                </div>
+
+                <!-- PAINEL ADMINISTRATIVO -->
+
+                <div id="admin-dashboard" class="admin-dashboard hidden">
+
+                    <div class="admin-welcome-card">
+
+                        <div class="admin-welcome-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+
+                        <div>
+                            <span>SESSÃO ADMINISTRATIVA</span>
+                            <h2>Bem-vindo, Lemos!</h2>
+                            <p>Você tem acesso ao gerenciamento da seleção.</p>
+                        </div>
+
+                        <button class="btn-danger" id="admin-logout">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Sair
+                        </button>
+
+                    </div>
+
+                    <!-- CONFIGURAÇÕES -->
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-eyebrow">CONFIGURAÇÕES</span>
+                            <h2>Gerenciamento geral</h2>
+                            <p>Altere as informações oficiais da Espanha.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="admin-options-grid">
+
+                        <button class="admin-option-card" data-admin-action="president">
+                            <div class="admin-option-icon red">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <strong>Presidência</strong>
+                            <span>Alterar nome da presidenta</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <button class="admin-option-card" data-admin-action="players">
+                            <div class="admin-option-icon gold">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <strong>Gerenciar jogadores</strong>
+                            <span>Cadastrar e convocar jogadores</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <button class="admin-option-card" data-admin-action="statistics">
+                            <div class="admin-option-icon green">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <strong>Estatísticas</strong>
+                            <span>Atualizar dados dos jogadores</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <button class="admin-option-card" data-admin-action="seasons">
+                            <div class="admin-option-icon dark">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <strong>Temporadas</strong>
+                            <span>Registrar e editar temporadas</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <button class="admin-option-card" data-admin-action="trophies">
+                            <div class="admin-option-icon gold">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <strong>Sala de troféus</strong>
+                            <span>Consultar títulos registrados nas temporadas</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =====================================
+                 RODAPÉ PRINCIPAL
+            ====================================== -->
+
+            <footer class="main-footer">
+
+                <div class="footer-brand">
+
+                    <img src="Assents/Favicon.png" alt="Espanha">
+
+                    <div>
+                        <strong>ESPANHA</strong>
+                        <span>¡Vamos, España!</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    © 2026 Espanha. Todos os direitos reservados.
+                </p>
+
+                <span class="footer-credit">
+                    Desenvolvido para a Espanha.
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- =====================================
+         MODAIS DO SISTEMA
+    ====================================== -->
+
+    <!-- MODAL: JOGADOR -->
+
+    <div class="modal-overlay" id="player-modal">
+
+        <div class="modal-container">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">GERENCIAMENTO</span>
+                    <h2 id="player-modal-title">Adicionar jogador</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="player-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <form id="player-form">
+
+                <input type="hidden" id="player-id">
+
+                <div class="form-group">
+                    <label for="player-name">Nome do jogador</label>
+                    <input type="text" id="player-name" placeholder="Nome completo ou nick" required>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="player-position">Posição</label>
+                        <select id="player-position" required>
+                            <option value="">Selecione</option>
+                            <option value="Goleiro">Goleiro</option>
+                            <option value="Defensor">Defensor</option>
+                            <option value="Meio-campista">Meio-campista</option>
+                            <option value="Atacante">Atacante</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="player-callup-status">Convocação</label>
+                        <select id="player-callup-status" required>
+                            <option value="Não convocado">Não convocado</option>
+                            <option value="Convocado">Convocado</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="player-number">Número da camisa</label>
+                        <input
+                            type="number"
+                            id="player-number"
+                            min="1"
+                            max="12"
+                            placeholder="De 1 a 12"
+                            disabled
+                        >
+                        <small class="field-hint">Disponível somente para jogadores convocados.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="player-nationality">Nacionalidade</label>
+                        <input type="text" id="player-nationality" placeholder="Ex: Espanhola">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="player-status">Situação do cadastro</label>
+                    <select id="player-status">
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="modal-actions">
+
+                    <button type="button" class="btn-secondary" data-close-modal="player-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Salvar jogador
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL: PRESIDENTA -->
+
+    <div class="modal-overlay" id="president-modal">
+
+        <div class="modal-container">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">LIDERANÇA</span>
+                    <h2>Editar presidência</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="president-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <form id="president-form">
+
+                <div class="form-group">
+
+                    <label for="president-edit-name">
+                        Nome da presidenta
+                    </label>
+
+                    <input
+                        type="text"
+                        id="president-edit-name"
+                        placeholder="Digite o nome da presidenta"
+                        required
+                    >
+
+                </div>
+
+                <div class="modal-actions">
+
+                    <button type="button" class="btn-secondary" data-close-modal="president-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Salvar alterações
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL: TEMPORADA -->
+
+    <div class="modal-overlay" id="season-modal">
+
+        <div class="modal-container">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="section-eyebrow">HISTÓRICO OFICIAL</span>
+                    <h2 id="season-modal-title">Registrar temporada</h2>
+                </div>
+
+                <button class="modal-close" data-close-modal="season-modal" aria-label="Fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <form id="season-form">
+
+                <input type="hidden" id="season-id">
+
+                <div class="form-group">
+                    <label for="season-name">Identificação da temporada</label>
+                    <input
+                        type="text"
+                        id="season-name"
+                        placeholder="Ex: S1, S2, S3..."
+                        maxlength="20"
+                        required
+                    >
+                    <small class="field-hint">Utilize a sequência oficial das temporadas: S1, S2, S3...</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="season-titles">Títulos conquistados</label>
+                    <textarea
+                        id="season-titles"
+                        rows="5"
+                        placeholder="Campeonato Nacional&#10;Copa da Espanha&#10;Supercopa"
+                    ></textarea>
+                    <small class="field-hint">Escreva um título por linha. A Sala de Troféus será atualizada automaticamente.</small>
+                </div>
+
+                <div class="form-section-divider">
+                    <span>DESTAQUES INDIVIDUAIS</span>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="season-top-scorer">Artilheiro do time</label>
+                        <input
+                            type="text"
+                            id="season-top-scorer"
+                            placeholder="Nome do jogador"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="season-goals">Quantidade de gols</label>
+                        <input
+                            type="number"
+                            id="season-goals"
+                            min="0"
+                            step="1"
+                            placeholder="Ex: 25"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="season-top-assistant">Assistente do time</label>
+                        <input
+                            type="text"
+                            id="season-top-assistant"
+                            placeholder="Nome do jogador"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="season-assists">Quantidade de assistências</label>
+                        <input
+                            type="number"
+                            id="season-assists"
+                            min="0"
+                            step="1"
+                            placeholder="Ex: 12"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="season-description">Observações da temporada (opcional)</label>
+                    <textarea
+                        id="season-description"
+                        rows="3"
+                        placeholder="Registre algum detalhe importante desta temporada..."
+                    ></textarea>
+                </div>
+
+                <div class="modal-actions">
+
+                    <button type="button" class="btn-secondary" data-close-modal="season-modal">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Salvar temporada
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- NOTIFICAÇÕES -->
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="JS/supabase.js"></script>
+
+    <script src="JS/painel.js"></script>
+    <script src="JS/jogadores.js"></script>
+    <script src="JS/estatisticas.js"></script>
+    <script src="JS/temporadas.js"></script>
+    <script src="JS/trofeus.js"></script>
+    <script src="JS/admin.js"></script>
+
+    <script src="JS/script.js"></script>
+
+</body>
+</html>

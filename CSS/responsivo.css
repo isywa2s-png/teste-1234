@@ -1,0 +1,999 @@
+
+/* =========================================================
+   ESPANHA — SITE OFICIAL
+   ARQUIVO: CSS/responsivo.css
+
+   RESPONSIVIDADE:
+   DESKTOP | NOTEBOOK | TABLET | CELULAR
+========================================================= */
+
+
+/* =========================================================
+   1. NOTEBOOKS E TELAS MENORES
+   ATÉ 1200PX
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+        --sidebar-width: 235px;
+    }
+
+    .page-section {
+        padding: 28px 25px 40px;
+    }
+
+    .topbar {
+        padding: 0 25px;
+    }
+
+    .sidebar-header {
+        padding: 20px 17px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .players-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .seasons-grid,
+    .trophies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-options-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .statistics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .welcome-emblem {
+        width: 155px;
+        height: 155px;
+    }
+
+}
+
+
+/* =========================================================
+   2. TABLETS E NOTEBOOKS COMPACTOS
+   ATÉ 992PX
+========================================================= */
+
+@media (max-width: 992px) {
+
+    :root {
+        --sidebar-width: 265px;
+        --topbar-height: 68px;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: none;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        box-shadow: 10px 0 35px rgba(0,0,0,0.18);
+    }
+
+    .sidebar-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33px;
+        height: 33px;
+        margin-left: auto;
+        background: rgba(255,255,255,0.08);
+        color: var(--white);
+        border-radius: 8px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 900;
+        background: rgba(0,0,0,0.45);
+        backdrop-filter: blur(2px);
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
+
+    .welcome-banner {
+        min-height: 245px;
+        padding: 30px;
+    }
+
+    .welcome-content h1 {
+        font-size: 34px;
+    }
+
+    .welcome-emblem {
+        width: 135px;
+        height: 135px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .players-grid,
+    .seasons-grid,
+    .trophies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-options-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-footer {
+        padding: 18px 25px;
+    }
+
+}
+
+
+/* =========================================================
+   3. TABLETS
+   ATÉ 768PX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .topbar-left,
+    .topbar-right {
+        gap: 11px;
+    }
+
+    .topbar-club img {
+        width: 33px;
+        height: 33px;
+    }
+
+    .topbar-club strong {
+        font-size: 10px;
+    }
+
+    .online-indicator {
+        font-size: 9px;
+    }
+
+    .page-section {
+        padding: 24px 18px 35px;
+    }
+
+    .welcome-banner {
+        min-height: 220px;
+        padding: 27px;
+    }
+
+    .welcome-content {
+        max-width: 75%;
+    }
+
+    .welcome-content h1 {
+        font-size: 29px;
+    }
+
+    .welcome-content p {
+        font-size: 11px;
+    }
+
+    .welcome-emblem {
+        width: 115px;
+        height: 115px;
+    }
+
+    .section-heading {
+        margin-top: 26px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-card {
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .dashboard-card-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 16px;
+    }
+
+    .dashboard-card-info strong {
+        font-size: 23px;
+    }
+
+    .roster-summary-item {
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .roster-toolbar {
+        align-items: stretch;
+    }
+
+    .search-box {
+        max-width: none;
+        flex: 1 1 100%;
+    }
+
+    .filter-box {
+        flex: 1;
+    }
+
+    .filter-box select {
+        width: 100%;
+    }
+
+    .president-card {
+        padding: 18px;
+    }
+
+    .statistics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trophy-highlight {
+        padding: 21px;
+    }
+
+    .trophy-highlight-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .trophy-highlight strong {
+        font-size: 29px;
+    }
+
+    .main-footer {
+        padding: 17px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   4. CELULARES GRANDES
+   ATÉ 600PX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    :root {
+        --topbar-height: 63px;
+    }
+
+    .topbar {
+        padding: 0 13px;
+    }
+
+    .topbar-left {
+        gap: 9px;
+    }
+
+    .topbar-right {
+        gap: 8px;
+    }
+
+    .menu-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .breadcrumb {
+        gap: 6px;
+        font-size: 9px;
+    }
+
+    .breadcrumb span {
+        display: none;
+    }
+
+    .topbar-divider {
+        display: none;
+    }
+
+    .topbar-club {
+        gap: 6px;
+    }
+
+    .topbar-club img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .topbar-club strong {
+        font-size: 9px;
+    }
+
+    .topbar-club small {
+        font-size: 8px;
+    }
+
+    .online-indicator {
+        display: none;
+    }
+
+    .page-section {
+        padding: 19px 13px 30px;
+    }
+
+    .welcome-banner {
+        min-height: 225px;
+        padding: 23px 19px;
+        border-radius: 16px;
+    }
+
+    .welcome-content {
+        max-width: 100%;
+        position: relative;
+        z-index: 3;
+    }
+
+    .welcome-content h1 {
+        font-size: 27px;
+        max-width: 300px;
+    }
+
+    .welcome-content p {
+        font-size: 10px;
+        max-width: 290px;
+    }
+
+    .welcome-emblem {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        right: -22px;
+        bottom: 4px;
+        opacity: 0.19;
+    }
+
+    .welcome-tag {
+        font-size: 8px;
+        padding: 5px 9px;
+    }
+
+    .welcome-actions {
+        gap: 8px;
+        margin-top: 17px;
+    }
+
+    .welcome-actions .btn-primary,
+    .welcome-actions .btn-secondary {
+        min-height: 37px;
+        padding: 0 12px;
+        font-size: 9px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin: 25px 0 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .section-heading p {
+        font-size: 10px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 22px;
+    }
+
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .page-header p {
+        font-size: 10px;
+    }
+
+    .page-header-actions {
+        width: 100%;
+    }
+
+    .page-header-actions button {
+        flex: 1;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .dashboard-card {
+        padding: 13px;
+        gap: 9px;
+        border-radius: 12px;
+    }
+
+    .dashboard-card-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+
+    .dashboard-card-info span {
+        font-size: 9px;
+    }
+
+    .dashboard-card-info strong {
+        font-size: 21px;
+    }
+
+    .dashboard-card-info small {
+        font-size: 8px;
+    }
+
+    .players-grid,
+    .seasons-grid,
+    .trophies-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .admin-options-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .admin-option-card {
+        padding: 15px;
+    }
+
+    .admin-option-card strong {
+        font-size: 11px;
+    }
+
+    .admin-option-card span {
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .admin-option-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 15px;
+        margin-bottom: 11px;
+    }
+
+    .statistics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 14px;
+        gap: 6px;
+    }
+
+    .stat-card strong {
+        font-size: 23px;
+    }
+
+    .stat-card span {
+        font-size: 9px;
+    }
+
+    .stat-card-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .roster-summary {
+        gap: 9px;
+    }
+
+    .roster-summary-item {
+        min-width: calc(50% - 5px);
+        padding: 11px;
+        gap: 9px;
+    }
+
+    .roster-summary-item > i {
+        width: 33px;
+        height: 33px;
+        font-size: 13px;
+    }
+
+    .roster-summary-item strong {
+        font-size: 15px;
+    }
+
+    .roster-summary-item span {
+        font-size: 8px;
+    }
+
+    .roster-toolbar {
+        gap: 9px;
+    }
+
+    .search-box {
+        min-height: 41px;
+    }
+
+    .filter-box select {
+        min-width: 0;
+        min-height: 40px;
+        font-size: 9px;
+    }
+
+    .president-card {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .president-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .president-information h3 {
+        font-size: 14px;
+    }
+
+    .president-badge {
+        font-size: 8px;
+        padding: 7px 9px;
+        margin-left: auto;
+    }
+
+    .season-information-card {
+        padding: 13px;
+        gap: 10px;
+    }
+
+    .season-information-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 14px;
+    }
+
+    .season-information-card strong {
+        font-size: 10px;
+    }
+
+    .season-information-card p {
+        font-size: 9px;
+    }
+
+    .season-card {
+        padding: 18px;
+    }
+
+    .season-highlight {
+        gap: 8px;
+    }
+
+    .season-highlight-item {
+        padding: 9px;
+    }
+
+    .season-highlight-item strong {
+        font-size: 10px;
+    }
+
+    .trophy-highlight {
+        padding: 17px;
+        gap: 13px;
+        border-radius: 15px;
+    }
+
+    .trophy-highlight-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .trophy-highlight strong {
+        font-size: 25px;
+    }
+
+    .trophy-highlight span {
+        font-size: 8px;
+    }
+
+    .trophy-highlight p {
+        font-size: 9px;
+    }
+
+    .trophy-information {
+        padding: 11px;
+        font-size: 9px;
+    }
+
+    .trophy-card {
+        padding: 20px;
+    }
+
+    .admin-login-card {
+        margin: 20px auto;
+        padding: 24px 19px;
+    }
+
+    .admin-login-card h2 {
+        font-size: 19px;
+    }
+
+    .admin-welcome-card {
+        padding: 16px;
+        gap: 11px;
+    }
+
+    .admin-welcome-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .admin-welcome-card h2 {
+        font-size: 13px;
+    }
+
+    .admin-welcome-card p {
+        font-size: 9px;
+    }
+
+    .main-footer {
+        padding: 16px 13px;
+        gap: 11px;
+    }
+
+    .main-footer p,
+    .footer-credit {
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   5. CELULARES PEQUENOS
+   ATÉ 400PX
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .topbar-club small {
+        display: none;
+    }
+
+    .breadcrumb {
+        font-size: 8px;
+    }
+
+    .welcome-banner {
+        min-height: 215px;
+        padding: 20px 16px;
+    }
+
+    .welcome-content h1 {
+        font-size: 24px;
+    }
+
+    .welcome-content p {
+        font-size: 9px;
+    }
+
+    .welcome-actions .btn-primary,
+    .welcome-actions .btn-secondary {
+        min-height: 34px;
+        padding: 0 9px;
+        font-size: 8px;
+    }
+
+    .dashboard-card {
+        padding: 11px 9px;
+        gap: 7px;
+    }
+
+    .dashboard-card-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .dashboard-card-info strong {
+        font-size: 19px;
+    }
+
+    .dashboard-card-info span {
+        font-size: 8px;
+    }
+
+    .dashboard-card-info small {
+        font-size: 7px;
+    }
+
+    .roster-summary-item {
+        min-width: 100%;
+    }
+
+    .roster-summary-item span {
+        font-size: 9px;
+    }
+
+    .admin-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-option-card {
+        min-height: 125px;
+    }
+
+    .season-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .trophy-highlight {
+        gap: 10px;
+    }
+
+    .trophy-highlight-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .trophy-highlight strong {
+        font-size: 22px;
+    }
+
+    .modal-overlay {
+        padding: 10px;
+    }
+
+    .modal-container {
+        padding: 20px 16px;
+        max-height: 94vh;
+        border-radius: 15px;
+    }
+
+    .modal-header h2 {
+        font-size: 16px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .modal-actions {
+        flex-wrap: wrap;
+    }
+
+    .modal-actions button {
+        flex: 1;
+    }
+
+}
+
+
+/* =========================================================
+   6. TELAS MUITO PEQUENAS
+   ATÉ 340PX
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .page-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .topbar {
+        padding: 0 9px;
+    }
+
+    .topbar-club strong {
+        font-size: 8px;
+    }
+
+    .welcome-content h1 {
+        font-size: 22px;
+    }
+
+    .welcome-tag {
+        font-size: 7px;
+    }
+
+    .dashboard-grid,
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 13px;
+    }
+
+    .dashboard-card-info strong {
+        font-size: 22px;
+    }
+
+    .page-header h1 {
+        font-size: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-danger {
+        padding: 0 11px;
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   7. AJUSTES PARA MODAIS E FORMULÁRIOS
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    .form-group label {
+        font-size: 9px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 11px;
+        min-height: 42px;
+    }
+
+    .form-group textarea {
+        min-height: 85px;
+    }
+
+    .field-hint {
+        font-size: 8px;
+    }
+
+    .form-section-divider {
+        margin: 19px 0 14px;
+    }
+
+    .form-section-divider span {
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   8. TABELAS EM DISPOSITIVOS MÓVEIS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .content-card-header {
+        padding: 15px;
+    }
+
+    .data-table th {
+        padding: 12px;
+        font-size: 8px;
+    }
+
+    .data-table td {
+        padding: 12px;
+        font-size: 9px;
+    }
+
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
+
+
+/* =========================================================
+   9. PREVENÇÃO DE QUEBRAS DE LAYOUT
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-section,
+    .main-content,
+    .content-card,
+    .dashboard-card,
+    .player-card,
+    .season-card,
+    .trophy-card {
+        min-width: 0;
+    }
+
+    .page-section {
+        overflow-wrap: break-word;
+    }
+
+    .data-table {
+        min-width: 550px;
+    }
+
+    .player-card-body h3,
+    .season-card h3,
+    .trophy-card h3 {
+        overflow-wrap: anywhere;
+    }
+
+}
+
+
+/* =========================================================
+   10. ACESSIBILIDADE E REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================================
+   FIM DO RESPONSIVO.CSS
+========================================================= */

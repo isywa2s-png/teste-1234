@@ -1,0 +1,593 @@
+
+/* =========================================================
+   ESPANHA — SITE OFICIAL
+   ARQUIVO: CSS/animacoes.css
+
+   ANIMAÇÕES E EFEITOS VISUAIS
+========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURAÇÕES GERAIS
+========================================================= */
+
+:root {
+    --animation-fast: 0.18s ease;
+    --animation-normal: 0.3s ease;
+    --animation-slow: 0.55s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+    transition:
+        color var(--animation-normal),
+        background var(--animation-normal),
+        border-color var(--animation-normal),
+        box-shadow var(--animation-normal),
+        transform var(--animation-normal);
+}
+
+
+/* =========================================================
+   2. ANIMAÇÕES DE ENTRADA
+========================================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Aplicação das animações */
+
+.topbar {
+    animation: fadeInDown 0.45s ease both;
+}
+
+.welcome-banner {
+    animation: fadeInUp 0.55s ease both;
+}
+
+.page-header {
+    animation: fadeInDown 0.4s ease both;
+}
+
+.section-heading {
+    animation: fadeInUp 0.4s ease both;
+}
+
+.dashboard-card,
+.player-card,
+.season-card,
+.trophy-card,
+.admin-option-card,
+.president-card,
+.stat-card {
+    animation: fadeInUp 0.45s ease both;
+}
+
+.content-card {
+    animation: fadeInUp 0.4s ease both;
+}
+
+
+/* =========================================================
+   3. EFEITO ESCALONADO NOS CARDS
+========================================================= */
+
+.dashboard-card:nth-child(1),
+.player-card:nth-child(1),
+.season-card:nth-child(1),
+.trophy-card:nth-child(1),
+.stat-card:nth-child(1) {
+    animation-delay: 0.04s;
+}
+
+.dashboard-card:nth-child(2),
+.player-card:nth-child(2),
+.season-card:nth-child(2),
+.trophy-card:nth-child(2),
+.stat-card:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.dashboard-card:nth-child(3),
+.player-card:nth-child(3),
+.season-card:nth-child(3),
+.trophy-card:nth-child(3),
+.stat-card:nth-child(3) {
+    animation-delay: 0.12s;
+}
+
+.dashboard-card:nth-child(4),
+.player-card:nth-child(4),
+.season-card:nth-child(4),
+.trophy-card:nth-child(4),
+.stat-card:nth-child(4) {
+    animation-delay: 0.16s;
+}
+
+.dashboard-card:nth-child(5),
+.player-card:nth-child(5),
+.season-card:nth-child(5),
+.trophy-card:nth-child(5),
+.stat-card:nth-child(5) {
+    animation-delay: 0.20s;
+}
+
+.dashboard-card:nth-child(6),
+.player-card:nth-child(6),
+.season-card:nth-child(6),
+.trophy-card:nth-child(6),
+.stat-card:nth-child(6) {
+    animation-delay: 0.24s;
+}
+
+
+/* =========================================================
+   4. HOVER DOS CARDS
+========================================================= */
+
+.dashboard-card,
+.player-card,
+.season-card,
+.trophy-card,
+.admin-option-card,
+.stat-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+@media (hover: hover) {
+
+    .dashboard-card:hover,
+    .player-card:hover,
+    .season-card:hover,
+    .trophy-card:hover,
+    .admin-option-card:hover,
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+    }
+
+    .player-card:hover {
+        border-color: rgba(170, 21, 27, 0.35);
+    }
+
+    .trophy-card:hover {
+        border-color: rgba(241, 191, 0, 0.55);
+    }
+
+}
+
+
+/* =========================================================
+   5. BOTÕES
+========================================================= */
+
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+button {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+@media (hover: hover) {
+
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-danger:hover {
+        transform: translateY(-2px);
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 6px 16px rgba(170, 21, 27, 0.2);
+    }
+
+    .btn-danger:hover {
+        box-shadow: 0 6px 16px rgba(220, 38, 38, 0.17);
+    }
+
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-danger:active,
+button:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+    transform: none !important;
+}
+
+
+/* =========================================================
+   6. MENU LATERAL
+========================================================= */
+
+.sidebar {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sidebar-nav a,
+.sidebar-link,
+.nav-item {
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+@media (hover: hover) {
+
+    .sidebar-nav a:hover,
+    .sidebar-link:hover,
+    .nav-item:hover {
+        padding-left: 19px;
+    }
+
+}
+
+.sidebar-overlay {
+    animation: fadeIn 0.25s ease both;
+}
+
+
+/* =========================================================
+   7. MODAIS
+========================================================= */
+
+.modal-overlay {
+    animation: fadeIn 0.2s ease both;
+}
+
+.modal-container {
+    animation: zoomIn 0.25s ease both;
+    transform-origin: center;
+}
+
+.modal-header {
+    animation: fadeInDown 0.3s ease both;
+}
+
+.modal-actions {
+    animation: fadeInUp 0.3s ease both;
+}
+
+
+/* =========================================================
+   8. BANDEIRA E ESCUDO
+========================================================= */
+
+.welcome-emblem,
+.topbar-club img,
+.president-icon {
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+@media (hover: hover) {
+
+    .welcome-banner:hover .welcome-emblem {
+        transform: scale(1.04) rotate(-3deg);
+    }
+
+    .topbar-club:hover img {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* =========================================================
+   9. TROFÉUS E CONQUISTAS
+========================================================= */
+
+@keyframes trophyShine {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes trophyFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.trophy-highlight-icon {
+    transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+
+    .trophy-card:hover .trophy-highlight-icon,
+    .trophy-card:hover .trophy-icon {
+        animation: trophyFloat 1.5s ease-in-out infinite;
+    }
+
+}
+
+
+/* =========================================================
+   10. INDICADORES E STATUS
+========================================================= */
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.35);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+.online-indicator::before {
+    animation: pulse 2s infinite;
+}
+
+.callup-badge {
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+@media (hover: hover) {
+
+    .callup-badge:hover {
+        transform: scale(1.04);
+    }
+
+}
+
+
+/* =========================================================
+   11. FORMULÁRIOS E CAMPOS
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.search-box,
+.filter-box select {
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(170, 21, 27, 0.1);
+}
+
+
+/* =========================================================
+   12. ANIMAÇÃO DE CARREGAMENTO
+========================================================= */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingPulse {
+    0%,
+    100% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.loading-spinner {
+    animation: spin 0.8s linear infinite;
+}
+
+.loading,
+.loading-text {
+    animation: loadingPulse 1.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   13. ESTADOS VAZIOS
+========================================================= */
+
+.empty-state {
+    animation: fadeInUp 0.4s ease both;
+}
+
+.empty-state-icon {
+    animation: fadeIn 0.7s ease both;
+}
+
+
+/* =========================================================
+   14. NOTIFICAÇÕES
+========================================================= */
+
+@keyframes notificationIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes notificationOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.notification,
+.toast {
+    animation: notificationIn 0.3s ease both;
+}
+
+.notification.removing,
+.toast.removing {
+    animation: notificationOut 0.25s ease both;
+}
+
+
+/* =========================================================
+   15. TRANSIÇÃO ENTRE SEÇÕES
+========================================================= */
+
+.page-section {
+    animation: fadeIn 0.3s ease both;
+}
+
+.page-section.active {
+    animation: fadeInUp 0.35s ease both;
+}
+
+
+/* =========================================================
+   16. ACESSIBILIDADE
+========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* =========================================================
+   FIM DO ANIMACOES.CSS
+========================================================= */
